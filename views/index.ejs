@@ -1,0 +1,58 @@
+<%- include("partials/header.ejs") %>
+<main>
+  <div class="container">
+
+    <div class="title">
+      <p class="titleText"><%= title %></p>
+    </div>
+
+    <div class="box">
+
+      <%if(route === 'today')
+      {%>
+        <form class="item" action="/submit" method="POST">
+        <input class="input-field" type="text" name="todayTask" placeholder="Add New Task" required/>
+        <button class="round-button" type="submit">+</button>
+      </form>
+
+      <%if(locals.todayTasks)
+      {
+        todayTasks.forEach((task)=>
+        {%>
+          <form action="/delete" method="POST">
+            <div class="item">
+              <input type="checkbox" class="myCheckbox custom-checkbox" name="checkbox" value="<%= task._id%>" onchange="this.form.submit()"/>
+              <p class="strikeMe"><%=task.name %></p>
+            </div>
+          </form>
+       <% })
+      }%>        
+      <%}%>
+
+      <%if(route === 'work')
+      {%>
+
+        <form class="item" action="/submitwork" method="POST">
+        <input class="input-field" type="text" name="workTask" placeholder="Add New Task" required/>
+        <button class="round-button" type="submit">+</button>
+      </form>
+        <%if(locals.workTasks)
+      {
+        workTasks.forEach((task)=>
+        {%>
+          <form action="/deletework" method="POST">
+            <div class="item">
+              <input type="checkbox" name="checkbox" value="<%= task._id %>" onchange="this.form.submit()" class="myCheckbox custom-checkbox"/>
+            <p class="strikeMe"><%=task.name %></p>
+          </div>
+          </form>
+       <% })
+      }%>
+      <%}%>
+
+    </div>
+    <p class="mt-3" style="text-align: center;">Mark a checkbox to delete a task or custom list</p>
+  </div>
+</main>
+
+<%- include("partials/footer.ejs") %>

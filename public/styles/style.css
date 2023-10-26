@@ -1,0 +1,206 @@
+body
+{
+    background: linear-gradient(10deg, #F3B6C2 40%, #d7f1f5 40%, #d7f1f5);
+    margin: 0;
+    padding: 0;
+}
+
+.mainContainer
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.pinkText
+{
+    color: #fa6985;
+}
+
+a
+{
+    text-decoration: none;
+    color: #fa6985;
+    vertical-align: middle;
+}
+
+header
+{
+    padding: 20px;
+    
+    font-size: 1.5rem;
+}
+
+main
+{
+    flex: 1;
+    padding: 20px;
+}
+
+footer
+{
+    padding: 20px;
+    text-align: center;
+    color: #fa6985;
+}
+
+.nav
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.navItems
+{
+    margin-left: 20px;
+}
+
+.navItems:last-child
+{
+    margin-left: auto;
+}
+
+/* Initial styles for the div */
+.div-with-underline {
+    position: relative; /* Required for the ::before pseudo-element */
+    padding-bottom: 8px; /* Adjust as needed to control the underline's height */
+    cursor: pointer; /* Change cursor on hover */
+    transition: all 0.3s; /* Smooth transition effect */
+}
+
+/* Create the pink underline using ::before */
+.div-with-underline::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; /* Adjust the height of the underline as needed */
+    background-color: #F3B6C2;
+    transition: all 0.3s; /* Smooth transition effect */
+}
+
+/* Define the hover effect to expand the underline */
+.div-with-underline:hover::before {
+    width: 100%;
+}
+
+
+span {
+    vertical-align: middle;
+}
+
+.box
+{
+    max-width: 500px;
+    background: #fffcea;
+    margin: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+}
+
+.item{
+    display: flex;
+    min-height: 40px;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid rgba(155, 151, 151, 0.445);
+}
+
+
+.input-field {
+    flex: 1; /* Allow the input field to grow and occupy available space */
+    margin: 20px; /* Optional padding for spacing */
+    border: none; /* Remove the border */
+    outline: none; /* Remove the outline (focus border) */
+    font-size: large;
+    color: #fa6985;
+    background-color: #fffcea;
+}
+
+.newlist
+{
+    background-color: transparent; /* Transparent background */
+    border: none; /* No visible border */
+    border-bottom: 1px solid #F3B6C2;; /* Add a bottom border */
+    outline: none; /* Remove the default input outline */
+    width: 200px; /* Adjust the width as needed */
+    padding: 5px; /* Add some padding for better aesthetics */
+    color: #fa6985; /* Text color */
+    font-size: 16px; /* Font size */
+    vertical-align: middle;
+    margin-left: auto;
+}
+
+input[type="checkbox"] {
+    margin: 20px;
+}
+
+p
+{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #fa6985;
+}
+
+.round-button {
+    min-height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: #74e4f5 ;
+    color: #fff;
+    font-size: 30px;
+    border-width: 0;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+
+.round-button:hover {
+    background-color: #2ad8f3 ; /* Darker blue on hover */
+}
+
+.myCheckbox:checked + .strikeMe {
+    text-decoration: line-through;
+    color: #2ad8f3;
+}
+
+.title
+{
+    background-color: #2ad8f3;
+    border-radius: 20px 20px 0 0 ;
+    min-height: 70px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleText
+{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+
+.custom-checkbox {
+    width: 15px; /* Set the width to make it larger */
+    height: 15px; /* Set the height to make it larger */
+    border: 2px solid pink; /* Add a pink border */
+    appearance: none; /* Remove the default checkbox style */
+  }
+
+  .customList-label {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically align items to the center */
+  }
+
+
+
+
+
